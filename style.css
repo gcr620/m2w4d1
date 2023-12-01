@@ -1,0 +1,41 @@
+body{
+    background-color: grey;
+}
+h1{
+    text-align: center;
+}
+span{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.where{
+    margin-bottom: 20px;
+}
+.title{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.flex{
+    display: flex;
+}
+.field{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#result{
+    justify-content: center;
+}
+#result li{
+    font-size: larger;
+}
+#none{
+    text-align: center;
+}
+#bb{
+    font-size: large;
+    margin-bottom: 50px;
+}
+h4{
+    text-align: center;
+}
