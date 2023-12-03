@@ -125,49 +125,35 @@ const jobs = [
   },
 ]
 
-let result = [];
-let count = 0;
-// cmd
-// let loc = "US";
-// let pos = "Marketing";
-// cmd
-let loc= document.getElementById("place").value;
-let pos= document.getElementById("where").value;
-
-let locL = loc.toLowerCase(); 
-let posL = pos.toLowerCase();
-// let nn = document.getElementById("none");
-// let list = document.getElementById("result");
-// console.log(locL);
-
-// solo cmd
-// function search1(){
-//   for (let index = 0; index < jobs.length - 1; index++) {
-//     let tempL = jobs[index].location.toLocaleLowerCase();
-//     let tempP = jobs[index].title.toLocaleLowerCase();
-//     if (tempL.includes(locL) && tempP.includes(posL)) {
-//       result.push(jobs[index]);
-//       count++;
-//     }
-//   } 
-//   console.log(result);
-// }
-// console.log(search1());
 
 // html
 function search2() {
+  let nn = document.getElementById("none");
+  let list = document.getElementById("res");
+  let loc= document.getElementById("place").value;
+  let pos= document.getElementById("job").value;
+  let count = 0;
+  let son = document.getElementById("res").childElementCount;
+  nn.innerText = " ";
+  if (loc === "" || pos === "") {
+    nn.innerText = "Nessun risultato trovato";
+    document.getElementById("c").innerText = "Lavori trovati: " +  count;
+  } else {
   for (let index = 0; index < jobs.length; index++) {
     let tempL = jobs[index].location.toLocaleLowerCase();
     let tempP = jobs[index].title.toLocaleLowerCase();
-    if (tempL.includes(locL) && tempP.includes(posL)) {
-      result.push(jobs[index]);
+    if (tempL.includes(loc.toLowerCase()) && tempP.includes(pos.toLowerCase())) {
+      let lis = document.createElement("li");
+      lis.innerText = jobs[index].title + " " + jobs[index].location;
+      list.appendChild(lis);
       count++;
-    }
-  } 
-  console.log(result);
-  if (result.length === undefined) {
-    nn.innerText = "Nessun risultato trovato";
-  } else {
-    result.innerText = result;
+    } else continue
   }
+  document.getElementById("c").innerText = "Lavori trovati: " +  count;
+    for (let y = 1; y = son; y++) {
+      list.removeChild(list.firstElementChild)
+    }
+console.log(list);
 }
+}
+
