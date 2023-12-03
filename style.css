@@ -36,6 +36,9 @@ span{
     font-size: large;
     margin-bottom: 50px;
 }
-h4{
+h2{
     text-align: center;
+}
+#res{
+    flex-direction: column;
 }
