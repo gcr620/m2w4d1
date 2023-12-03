@@ -9,19 +9,20 @@
 <body>
     <h1 id="head">Cerca il lavoro adatto a te!</h1>
     <div class="flex field">
-        <div class="where">
+        <div id="where">
             <span>Luogo</span>
             <input type="text" placeholder="Luogo" id="place">
         </div>
-        <div class="title">
+        <div id="title">
             <span>Titolo</span>
             <input type="text" placeholder="Titolo" id="job">
         </div>
         <button type="button" id="bb" onclick="search2()">Cerca</button>
     </div>
     <h2>Lavori Trovati:</h2>
-    <div class="flex" id="result">test</div>
+    <ul id="res"></ul>
     <h3 id="none"></h3>
+    <p id="c"></p>
     <script src="script.js"></script>
 </body>
 </html>
