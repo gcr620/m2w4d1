@@ -135,6 +135,9 @@ function search2() {
   let count = 0;
   let son = document.getElementById("res").childElementCount;
   nn.innerText = " ";
+  for (let y = 1; y = son; y++) {
+      list.removeChild(list.firstElementChild)
+    }    
   if (loc === "" || pos === "") {
     nn.innerText = "Nessun risultato trovato";
     document.getElementById("c").innerText = "Lavori trovati: " +  count;
@@ -150,9 +153,6 @@ function search2() {
     } else continue
   }
   document.getElementById("c").innerText = "Lavori trovati: " +  count;
-    for (let y = 1; y = son; y++) {
-      list.removeChild(list.firstElementChild)
-    }
 console.log(list);
 }
 }
